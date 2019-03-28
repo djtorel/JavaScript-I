@@ -98,10 +98,15 @@ console.log(`${lastCar.car_make} ${lastCar.car_model}`);
 const mapArray = (array, callback) => {
   let mappedValue;
   let newArray = new Array(array.length);
-  for (let i = 0; i < array.length; i++) {
-    const value = array[i];
+  // for (let i = 0; i < array.length; i++) {
+  //   const value = array[i];
+  //   mappedValue = callback(value, i, array);
+  //   newArray[i] = mappedValue;
+  // }
+  let i = 0;
+  for (let value of array) {
     mappedValue = callback(value, i, array);
-    newArray[i] = mappedValue;
+    newArray[i++] = mappedValue;
   }
   return newArray;
 };
@@ -130,6 +135,12 @@ console.log(carYears);
 // My own Filter
 const filterArray = (array, callback) => {
   let newArray = new Array(array.length);
+  // for (let i = 0; i < array.length; i++) {
+  //   const value = array[i];
+  //   if (callback(value, i, array)) {
+  //     newArray = [...newArray, value];
+  //   }
+  // }
   let i = 0;
   for (let value of array) {
     if (callback(value, i, array)) {
