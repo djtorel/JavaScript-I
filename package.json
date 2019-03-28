@@ -1,0 +1,11 @@
+{
+  "name": "JavaScript-I",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:djtorel/JavaScript-I.git",
+  "author": "Dominic Torruellas <dom@domtorr.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^5.15.3"
+  }
+}
