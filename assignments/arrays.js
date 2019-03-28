@@ -129,13 +129,14 @@ console.log(carYears);
 
 // My own Filter
 const filterArray = (array, callback) => {
-  let newArray = [];
-  for (let i = 0; i < array.length; i++) {
-    const value = array[i];
+  let newArray = new Array(array.length);
+  let i = 0;
+  for (let value of array) {
     if (callback(value, i, array)) {
-      newArray = [...newArray, value];
+      newArray[i++] = value;
     }
   }
+  newArray.length = i;
   return newArray;
 };
 let oldCars = filterArray(inventory, car => car.car_year < 2000);
