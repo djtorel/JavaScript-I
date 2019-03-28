@@ -97,19 +97,19 @@ console.log(antonietta.multiplyNums(3, 4));
 const parent = {
   name: 'Susan',
   age: 70,
-  speak: function() {
+  speak() {
     console.log(`My name is ${this.name}.`);
   },
   child: {
     name: 'George',
     age: 50,
-    speak: function() {
+    speak() {
       console.log(`My name is ${this.name}.`);
     },
     grandchild: {
       name: 'Sam',
       age: 30,
-      speak: function() {
+      speak() {
         console.log(`My name is ${this.name}.`);
       },
     },
@@ -133,4 +133,3 @@ parent.child.speak();
 
 // Have the grandchild speak
 parent.child.grandchild.speak();
-// mvp complete
