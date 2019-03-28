@@ -150,8 +150,8 @@ const filterArray = (array, callback) => {
   newArray.length = i;
   return newArray;
 };
-let oldCars = filterArray(inventory, car => car.car_year < 2000).length;
-console.log(oldCars);
+let oldCars = filterArray(inventory, car => car.car_year < 2000);
+console.log(oldCars.length);
 
 // ==== Challenge 6 ==== A buyer is interested in seeing only BMW and Audi cars
 // within the inventory.  Return an array that only contains BMW and Audi cars.
